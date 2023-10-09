@@ -1,0 +1,162 @@
+.open-button {
+  background-color: forestgreen;
+  color: white;
+  padding: 18px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  transform: translate(0, 0);
+  max-width: 80%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .open-button {
+    bottom: 23px;
+    left: 28px;
+    transform: none;
+    max-width: 150px;
+    font-size: 15px;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 767px) {
+  .open-button {
+    left: 20px;
+    right: unset;
+  }
+}      
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  width: 300px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+
+  
+/* Default styles */
+.chat-popup {
+width: calc(100% - 30px);
+max-width: 30%;
+margin: 0;
+border-radius: 10px;
+right: unset;
+left: 15px;
+}
+
+/* Styles for mobile view */
+@media (max-width: 767px) {
+.chat-popup {
+/* Add your mobile-specific styles here */
+/* For example: */
+max-width: 90%;
+left: 5px;
+}
+}
+        
+/* Rest of your CSS code */
+      @media (max-width: 767px) {
+  .btn-book-appointment {
+    width: 100%;
+    
+  }
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.fixed-bottom-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: hsl(279, 47%, 53%);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+@media (max-width: 767px) {
+  .fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    right: unset;
+    left: calc(100% - 20px); /* Adjust the padding value if necessary */
+    transform: translateX(-100%); /* Move the button to the right side */
+    padding: 12px 24px; /* Increase the padding as desired */
+    font-size: 14px;
+    white-space: nowrap; /* Prevent wrapping text */
+    opacity: 0.7;
+  }
+}
+
+.fixed-bottom-button:hover {
+  background-color: green;
+}

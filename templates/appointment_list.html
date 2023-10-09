@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <!-- Favicon -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+    
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+        <!-- Libraries Stylesheet -->
+    
+        <!-- Customized Bootstrap Stylesheet -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-DuJgjqn0+kVxxbZ8kz2iMPbkDfRMzBYC4tNH4i3Gh1bItg4tAaWf9ZvLJZuyLG+ZcIgveWdETy5w5H5WT5F5g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- Template Stylesheet -->
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Hospital Management</title>
+</head>
+<style>
+  h1 {
+    background-color: hsl(279, 47%, 53%);
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .text-center {
+      text-align: center;
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 767px) {
+      .text-center {
+        font-size: 24px;
+      }
+
+      .text-center i {
+        font-size: 30px;
+      }
+
+      .text-center u {
+        display: block;
+        margin-top: 10px;
+      }
+    }
+  .exclamation-icon {
+    color: darkmagenta;
+  }
+  
+  h2 {
+    font-size: 20px;
+    background-color: whitesmoke;
+    padding: 20px 0;
+    padding-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+  }    
+  .contact-info {
+    display: flex;
+    align-items: center;
+    color: gray;
+  }
+  @media (max-width: 767px) {
+      .contact-info {
+        font-size: 16px;
+      }
+    }
+  .map-marker-icon {
+    padding-left: 300px;
+    color:mediumseagreen;
+  }
+  
+  .phone-icon {
+    color:mediumseagreen;
+    margin-left: 5px;
+    padding-left: 600px;
+  }
+  @media (max-width: 767px) {
+      .contact-info {
+        flex-direction: column;
+        align-items: flex-start;
+      } }
+      .navbar {
+          background-color: white;
+          padding: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        
+        .navbar-logo {
+          margin-right: 10px;
+          height: 80px;
+          width: auto;
+        }
+        
+        .navbar-heading {
+          font-size: 40px;
+          font-weight: bold;
+          margin-right: 10px;
+          font-family: monospace;
+          font-weight: lighter;
+        }
+        
+        .navbar ul {
+          list-style-type: none;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-grow: 1; /* Add this line to make the list take up remaining space */
+        }
+        
+        .navbar li {
+          margin-right: 35px;
+          font-size: 18px;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-weight: 200;
+        }
+        
+        .navbar a {
+          text-decoration: none;
+          color: #333;
+        }
+        
+        .navbar .fa-user-circle {
+          margin-left: 10px; /* Add this line to adjust the margin */
+        }
+        
+        /* Media query for mobile view */
+        @media (max-width: 767px) {
+          .navbar {
+            flex-direction: column;
+          }
+        
+          .navbar-logo {
+            margin-bottom: 10px;
+          }
+        
+          .navbar ul {
+            flex-direction: column;
+          }
+        
+          .navbar li {
+            margin-right: 0;
+            margin-bottom: 5px;
+          }
+        
+          .navbar .fa-user-circle {
+            margin-top: 15px;
+            margin-left: 0; /* Reset the margin */
+          }
+        }  
+        .dropdown {
+          position: relative;
+        }
+        
+        .dropdown-toggle {
+          display: inline-block;
+          padding: 10px;
+          color: #333;
+          text-decoration: none;
+        }
+        
+        .dropdown-menu {
+          display: none;
+        }
+        
+        .dropdown.show .dropdown-menu {
+          display: block;
+        }
+        
+      
+        
+        .dropdown.show .dropdown-menu {
+          display: block;
+        }          .navbar a:hover {
+          color: hsl(279, 47%, 53%); /* Change color on hover */
+        }
+       .carousel-item img {
+      width: 100%; /* Set the desired width */
+      height: 700px; /* Set the desired height */
+      object-fit: cover;
+    }
+    @media (max-width: 767px) {
+      .carousel-inner img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    
+    #text {
+      background-color: hsl(279, 47%, 53%);
+      padding: 40px;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+      font-size: 40px;
+    }
+    
+    #text .heading {
+      font-size: 40px; /* Adjust the font size as needed */
+      margin-bottom: 20px;
+    }
+    
+    #text button.btn-book-appointment {
+      margin-left: 120px;
+      
+      color:white;
+      
+    }
+    .overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+    
+    .overlay-text {
+      font-size: 24px;
+    }
+    
+    .center-boxes {
+      display: flex;
+      justify-content: center;
+      background-color:silver;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 100%;
+      padding: 20px;
+    }
+    
+    .box {
+      width: 100%;
+      max-width: 400px;
+      height: 280px;
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+      margin: 20px;
+    }
+    
+    .box {
+      background-color: rgba(34, 206, 112, 0.5);
+      padding: 2px; /* Adjust the padding value as per your preference */
+    }
+    
+    @media (max-width: 768px) {
+      .box {
+        padding: 2px; /* Adjust the padding value for smaller screens */
+      }
+    }
+    
+    .user-icon {
+      background-color: green;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    
+    .user-icon i {
+      color: white;
+    }
+    .stethoscope-icon {
+      background-color: green;
+      display: inline-block;
+      padding: 10px;
+      border-radius: 50%;
+    }
+    
+    .stethoscope-icon i {
+      color: white;
+    }
+   
+    
+    .icon {
+      background-color:mediumseagreen;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+    }
+    
+    .icon i {
+      color: white;
+      font-size: 44px;
+    }
+    #submit:hover{
+      background-color:red;
+    }
+    #input{
+      padding: 90px;
+    }
+    .footer-text {
+      padding: 10px;
+      text-align: center;
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    @media (min-width: 768px) {
+      .contact-info {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    
+    .social-icons {
+      padding-left:900px;
+
+    }
+    
+    .social-icons i {
+      color: white;
+    }
+    #h{
+      font-size: 20px;
+      font-family:Arial, Helvetica, sans-serif;
+      color:gray;
+    }
+    h3{
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+      color: mediumseagreen;
+    }
+    .card {
+      border: none;
+    }
+    .btn-book-appointment:hover {
+      background-color: gray;
+    }
+    #h{
+      color:gray;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #p{
+      color:white;
+      font-size: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    #ah{
+      color:white;
+      font-size: 30px;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .open-button {
+      background-color: forestgreen;
+      color: white;
+      padding: 18px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      transform: translate(0, 0);
+      max-width: 80%;
+      border-radius: 10px;
+      box-sizing: border-box;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    @media (min-width: 768px) {
+      .open-button {
+        bottom: 23px;
+        left: 28px;
+        transform: none;
+        max-width: 150px;
+        font-size: 15px;
+        opacity: 0.7;
+      }
+    }
+    
+    @media (max-width: 767px) {
+      .open-button {
+        left: 20px;
+        right: unset;
+      }
+    }      
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 15px;
+      width: 300px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+    
+  
+      
+/* Default styles */
+.chat-popup {
+width: calc(100% - 30px);
+max-width: 30%;
+margin: 0;
+border-radius: 10px;
+right: unset;
+left: 15px;
+}
+
+/* Styles for mobile view */
+@media (max-width: 767px) {
+.chat-popup {
+  /* Add your mobile-specific styles here */
+  /* For example: */
+  max-width: 90%;
+  left: 5px;
+}
+}
+            
+    /* Rest of your CSS code */
+          @media (max-width: 767px) {
+      .btn-book-appointment {
+        width: 100%;
+        
+      }
+    }
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 15px;
+      border: 3px solid #f1f1f1;
+      z-index: 9;
+    }
+    
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    /* Full-width textarea */
+    .form-container textarea {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      resize: none;
+      min-height: 200px;
+    }
+    
+    /* When the textarea gets focus, do something */
+    .form-container textarea:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit/send button */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color: red;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    .fixed-bottom-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: hsl(279, 47%, 53%);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    
+    @media (max-width: 767px) {
+      .fixed-bottom-button {
+        position: fixed;
+        bottom: 20px;
+        right: unset;
+        left: calc(100% - 20px); /* Adjust the padding value if necessary */
+        transform: translateX(-100%); /* Move the button to the right side */
+        padding: 12px 24px; /* Increase the padding as desired */
+        font-size: 14px;
+        white-space: nowrap; /* Prevent wrapping text */
+        opacity: 0.7;
+      }
+    }
+    
+    .fixed-bottom-button:hover {
+      background-color: green;
+    }
+    
+    
+    
+    
+        .form-popup {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 15px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      width: 300px;
+      padding: 20px;
+      z-index: 9999;
+    }
+    
+    .form-container {
+      max-width: 100%;
+      padding: 16px;
+    }
+    
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    
+    .form-container input[type=text],
+    .form-container input[type=email] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+    }
+    
+    .form-container .btn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    
+    .form-container .btn:hover {
+      opacity: 0.8;
+    }
+    
+    .form-container .cancel {
+      background-color: #ccc;
+    }
+    
+    h1 u {
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .btn-subscribe {
+      width: 100%;
+      height: 50px;
+      font-size: 20px;
+      color: white;
+      background-color: hsl(279, 47%, 53%);
+      border: none;
+    }
+  
+    @media (max-width: 576px) {
+      .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+  
+      .row.justify-content-center > .col-lg-6 {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    #schedule {
+      background-color:hsl(279, 47%, 53%);
+      text-align: center;
+      padding: 20px;
+    }
+  
+ 
+  
+    .btn-book-now {
+      background-color: hsl(279, 36%, 46%);
+      color:white;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+    @media (max-width: 768px) {
+      h6 {
+        font-size: 24px;
+      }
+    }
+    .login-popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    .login-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 270px;
+    }
+    
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+    form input {
+      display: block;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 10px;
+    }
+    
+    form button {
+      background-color: hsl(279, 47%, 53%);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    .heading {
+      font-size: 50px;
+    }
+    
+    @media (max-width: 767px) {
+      .heading {
+        font-size: 40px;
+      }
+    }
+    #declaration-header {
+      text-align: center;
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      #declaration-header {
+        font-size: 18px;
+      }
+    }
+    
+    /* Style for the modal */
+
+#input {
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h6 {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: mediumseagreen;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+}
+
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.form-control {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.btn-subscribe {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  color: #fff;
+  background-color:hsl(279, 47%, 53%);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  h6 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 13px;
+  }
+}  
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left-content, .right-content {
+  flex-basis: 50%;
+}
+
+@media (max-width: 767px) {
+  .clinic-name,
+  .address,
+  .tel {
+    font-size: 18px;
+  }
+
+  .left-content, .right-content {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  margin-right: 5px;
+  flex: 1;
+  margin-bottom: -9px; /* Adjust the margin-bottom value as needed */
+}
+
+.search-input input {
+  margin-right: 5px;
+  width: 200px; /* Adjust the width value as needed */
+  height: 45px; /* Adjust the height value as needed */
+}
+
+.search-button {
+  margin-right: auto;
+}
+
+.search-button button {
+  width: 100%;
+  height: 100%;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+  .search-input {
+    width: 150px;
+  }
+
+  .search-input input,
+  .search-button button {
+    padding: 3px;
+    font-size: 12px;
+  }
+} 
+h6 {
+    background-image: linear-gradient(rgba(60, 179, 113, 0.8), rgba(60, 179, 113, 0.8)), url("https://th.bing.com/th/id/R.6d6fb6c680245f260e79f1f4ee15133a?rik=iuMU%2bCCVwPfvTQ&pid=ImgRaw&r=0");
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    padding-left: 260px;
+  }
+  
+  @media (max-width: 767px) {
+      h6 {
+        background-image: linear-gradient(rgba(60, 179, 113, 0.8), rgba(60, 179, 113, 0.8));
+        background-size: cover;
+        background-attachment: fixed;
+        padding-left: 20px;
+      }
+    } 
+.table{
+  max-width: 90%; /* Increase the max-width value */
+  height: auto; /* Remove the height property to let it adjust based on content */
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 2rem;
+
+}
+
+.open-button {
+  background-color: forestgreen;
+  color: white;
+  padding: 18px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  transform: translate(0, 0);
+  max-width: 80%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) {
+  .open-button {
+    bottom: 23px;
+    left: 28px;
+    transform: none;
+    max-width: 150px;
+    font-size: 15px;
+    opacity: 0.7;
+  }
+}
+
+@media (max-width: 767px) {
+  .open-button {
+    left: 20px;
+    right: unset;
+  }
+}      
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  width: 300px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+
+  
+/* Default styles */
+.chat-popup {
+width: calc(100% - 30px);
+max-width: 30%;
+margin: 0;
+border-radius: 10px;
+right: unset;
+left: 15px;
+}
+
+/* Styles for mobile view */
+@media (max-width: 767px) {
+.chat-popup {
+/* Add your mobile-specific styles here */
+/* For example: */
+max-width: 90%;
+left: 5px;
+}
+}
+        
+/* Rest of your CSS code */
+      @media (max-width: 767px) {
+  .btn-book-appointment {
+    width: 100%;
+    
+  }
+}
+/* The popup chat - hidden by default */
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width textarea */
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+.fixed-bottom-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: hsl(279, 47%, 53%);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+@media (max-width: 767px) {
+  .fixed-bottom-button {
+    position: fixed;
+    bottom: 20px;
+    right: unset;
+    left: calc(100% - 20px); /* Adjust the padding value if necessary */
+    transform: translateX(-100%); /* Move the button to the right side */
+    padding: 12px 24px; /* Increase the padding as desired */
+    font-size: 14px;
+    white-space: nowrap; /* Prevent wrapping text */
+    opacity: 0.7;
+  }
+}
+
+.fixed-bottom-button:hover {
+  background-color: green;
+}
+@media (max-width: 767px) {
+  .table-responsive table {
+    width: 100%;
+  }
+  .table-responsive table thead {
+    display: table-header-group;
+  }
+  .table-responsive table tbody,
+  .table-responsive table tr,
+  .table-responsive table td {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 1rem; /* Adjust the padding as needed */
+    box-sizing: border-box;
+  }
+  .table-responsive table td::before {
+    content: attr(data-label);
+    flex-basis: 100%;
+    font-weight: bold;
+    margin-bottom: 0.5rem; /* Adjust the spacing as needed */
+  }
+}
+
+
+
+</style>      
+<h1 class="text-center" id="declaration-header">
+  <i class="fas fa-exclamation-circle"></i> We're committed to a clean and safe facility.
+  <u onclick="openForm()">Submit</u> your health declaration.
+</h1>
+
+  <div class="form-popup" id="myForm">
+      <form class="form-container">
+        <h2 style="color:white;background-color:hsl(279, 47%, 53%);">Health Declaration Form</h2>
+    
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter your name" name="name" required>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter your email" name="email" required>
+        <label for="name"><b>Problem</b></label>
+        <input type="text" placeholder="Enter your Issue" name="name" required>
+
+        <button type="submit" class="btn">Submit</button>
+        <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+      </form>
+    </div>
+    <h2 class="no-padding-top">
+      <div class="contact-info">
+        <span>Kannur City In Kerala,India</span>
+        <span>
+          Tel: 123-456-7890
+        </span>
+      </div>  
+    </h2>
+        
+    <div class="navbar">
+      <ul>
+        <form class="search-form" action="{% url 'search' %}" method="GET">
+          <div class="search-input">
+            <input type="text" name="q" placeholder="Search">
+          </div>
+          <div class="search-button">
+            <button type="submit">Search</button>
+          </div>
+        </form>
+        <span class="navbar-heading">
+          <img src="https://clipground.com/images/heart-wave-clipart-3.png" style="width:70px;">
+          <span style="color: darkmagenta;">Medical</span>
+          <span style="color:mediumseagreen;">Clinic</span>
+          <p style="font-size: 20px;color:gray;"> Exams & Diagnostics</p>
+        </span>
+      
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   
+    
+        
+      
+        <li><a href="/patients_home/">HOME</a></li>
+        <li><a href="/patient_profile/">PROFILE</a></li>
+        <li><a href="/department_list_patient/">DEPARTMENTS</a></li>
+
+
+        <li><a href="/view_all_doctors_patient/">DOCTORS</a></li>
+
+
+
+
+
+      
+        
+
+
+        <li class="dropdown">
+          <a href="#" id="dropdownToggle" class="dropdown-toggle">BOOKING</a>
+          <ul id="dropdownMenu" class="dropdown-menu">
+              <li><a href="/create_appointment/">APPOINTMENT</a></li>
+              
+              <li><a href="/create_billing/">ADMISSION</a></li>
+          </ul>
+      </li>
+      
+        <li class="dropdown">
+          <a href="" id="profileDropdownToggle" class="dropdown">BILLING &#9662;</a>
+          <ul id="profileDropdownMenu" class="dropdown-menu">
+            <li><a href="/billing_detail/">ADMISSION</a></li>
+            <li><a href="/appointment_list/">APPOINTMENTS</a></li>
+            <li><a href="/all_medical_records_patient/">RECORD</a></li>
+
+          </ul>
+        </li>
+        <li><a href="/logout/">LOGOUT</a></li>
+
+      </ul>
+    </div>
+
+  
+    <h6>APPOINTMENTS</h6>
+    <br>
+    <br> <!-- Button to trigger the modal -->
+
+    <div class="table-responsive">
+      <table class="table">
+          <thead>
+              <tr>
+                  <th>Doctor</th>
+                  <th>Appointment Date</th>
+                  <th>Appointment Time</th>
+                  <th>Payment Type</th>
+                  <th>Billing Date</th>
+                  <th>Amount</th>
+              </tr>
+          </thead>
+          <tbody>
+              {% for appointment in appointments %}
+              <tr>
+                  <td>{{ appointment.doctor.first_name }} {{ appointment.doctor.last_name }}</td>
+                  <td>{{ appointment.appointment_date }}</td>
+                  <td>{{ appointment.appointment_time }}</td>
+                  <td>{{ appointment.billing.payment_type }}</td>
+                  <td>{{ appointment.billing.billing_date }}</td>
+                  <td>{{ appointment.billing.amount }}</td>
+              </tr>
+              {% endfor %}
+          </tbody>
+      </table>
+  </div>
+  
+
+          <br>
+          <br>
+          <footer style="background-color: mediumaquamarine; padding: 20px;">
+            <div class="footer-content d-flex justify-content-between align-items-center flex-wrap">
+              <div class="left-content text-center">
+                <p class="clinic-name" style="font-size: 25px; color: white; margin-bottom: 0;">Medical Clinic.Kannur City In Kerala,India</p>
+                <p class="address" style="font-size: 25px; color: white; margin-bottom: 0;">Kannur City In Kerala,India CA 94158</p>
+              </div>
+              <div class="right-content text-center">
+                <p class="tel" style="font-size: 25px; color: white; margin-bottom: 0;">Tel: 123-456-7890</p>
+                <div>
+                  <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp fa-2x"></i>
+                  </a>
+                  <a href="https://twitter.com/your-twitter-handle" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-twitter fa-2x"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
+          <a href="/booknow/"><div class="fixed-bottom-button" style="text-align: center;">
+            Book Now
+          </div></a>
+        
+          <button class="open-button" onclick="openForm2()">
+            <i class="fas fa-comments"></i>
+          </button>
+        
+          <div class="chat-popup" id="myForm2">
+            <form action="/action_page.php" class="form-container">
+              <h1>Medical Clinic</h1>
+          <h2>
+              We’ll reply as soon as we can</h2>
+              <label for="msg"><b>Message</b></label>
+              <textarea placeholder="Type message.." name="msg" required></textarea>
+          
+              <button type="submit" class="btn">Send</button>
+              <button type="button" class="btn cancel" onclick="closeForm2()">Close</button>
+            </form>
+          </div>
+        
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+          <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var dropdownToggle = document.getElementById("dropdownToggle");
+                var dropdownMenu = document.getElementById("dropdownMenu");
+              
+                dropdownToggle.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+                });
+              
+                window.addEventListener("load", function() {
+                  dropdownMenu.style.display = "none";
+                });
+              
+                var profileDropdownToggle = document.getElementById("profileDropdownToggle");
+                var profileDropdownMenu = document.getElementById("profileDropdownMenu");
+              
+                profileDropdownToggle.addEventListener("click", function(event) {
+                  event.preventDefault();
+                  profileDropdownMenu.style.display = profileDropdownMenu.style.display === "none" ? "block" : "none";
+                });
+              
+                window.addEventListener("load", function() {
+                  profileDropdownMenu.style.display = "none";
+                });
+              });
+                        function openForm() {
+                document.getElementById("myForm").style.display = "block";
+              }
+              
+              function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+              }
+              function openForm2() {
+                document.getElementById("myForm2").style.display = "block";
+              }
+              
+              function closeForm2() {
+                document.getElementById("myForm2").style.display = "none";
+              }
+              function showLoginPopup() {
+                document.getElementById("loginPopup").style.display = "block";
+              }
+              
+              function hideLoginPopup() {
+                document.getElementById("loginPopup").style.display = "none";
+              }
+        // Open the registration form modal when clicking on the "Register" link
+        document.getElementById("registerLink").addEventListener("click", function(event) {
+            event.preventDefault();
+            document.getElementById("registrationModal").style.display = "block";
+          });
+          
+          // Close the registration form modal when clicking on the close button or outside the modal
+          document.getElementById("closeButton").addEventListener("click", function() {
+            document.getElementById("registrationModal").style.display = "none";
+          });
+          
+          document.addEventListener("DOMContentLoaded", function() {
+            var appointmentDropdownToggle = document.getElementById("appointmentDropdownToggle");
+            var appointmentDropdownMenu = document.getElementById("appointmentDropdownMenu");
+          
+            appointmentDropdownToggle.addEventListener("click", function(event) {
+              event.preventDefault();
+              appointmentDropdownMenu.classList.toggle("show");
+            });
+          
+            window.addEventListener("click", function(event) {
+              if (!event.target.matches("#appointmentDropdownToggle")) {
+                appointmentDropdownMenu.classList.remove("show");
+              }
+            });
+          });
+              document.addEventListener("DOMContentLoaded", function() {
+        var dropdownToggle = document.getElementById("dropdownToggle");
+        var dropdownMenu = document.getElementById("dropdownMenu");
+        
+        dropdownToggle.addEventListener("click", function(event) {
+            event.preventDefault();
+            dropdownMenu.style.display = dropdownMenu.style.display === "none" ? "block" : "none";
+        });
+        
+        window.addEventListener("load", function() {
+            dropdownMenu.style.display = "none";
+        });
+        });
+        
+          </script>
+        
+
+          {% if messages %}
+          <script>
+            {% for message in messages %}
+              {% if message.tags == 'success' and message.message == 'Appointment created successfully.' %}
+                alert('{{ message|safe }}');
+              {% endif %}
+            {% endfor %}
+          </script>
+        {% endif %}
+                        
